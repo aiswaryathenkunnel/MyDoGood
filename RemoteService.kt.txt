@@ -1,0 +1,7 @@
+package com.example.recyclerview.Retrofit
+import com.example.recyclerview.Models.UserList
+import retrofit2.http.GET
+interface RemoteService {
+    @GET("/api/users?page=2")
+    fun getUserProfile() : retrofit2.Call<UserList>
+}
